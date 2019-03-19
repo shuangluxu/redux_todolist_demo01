@@ -4,6 +4,7 @@
  * 用户输入或其它非 view 的数据 ）传到 store 的有效载荷。它是 store 数据的唯一来源。
  * 一般来说你会通过 store.dispatch() 将 action 传到 store。
  * 1.action 内必须使用一个字符串类型的 type 字段来表示将要执行的动作。
+ * 2.应该尽量减少在 action 中传递的数据
  */
 let nextTodoId = 0;
 
