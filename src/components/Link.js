@@ -5,6 +5,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * children 参数哪来的？
+ * 是React自带的表示当前组件的所有子元素
+ */
 const Link = ({ active, children, onClick }) => {
     if (active) {
         return <span>{children}</span>

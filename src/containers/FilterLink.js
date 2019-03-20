@@ -20,6 +20,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
+/**
+ * connect() 是个高阶函数，传入配置和要连接的组件，
+ * 返回一个新组件，所有传入新组件的 prop ，
+ * 包括 children，都将被传递给被连接的组件
+ */
 const FilterLink = connect(
     mapStateToProps,
     mapDispatchToProps

@@ -47,6 +47,13 @@ let AddTodo = ({ dispatch }) => {
 /**
  * store 里能直接通过 store.dispatch() 调用 dispatch() 方法，
  * 但是多数情况下会使用 react-redux 提供的 connect() 帮助器来调用。
+ * 
+ * 注意：connect() 函数中没有传入参数：
+ *      有时我们需要 connect 函数执行后调用自己的页面或组件，
+ *      只需要将 connect(mapStateToProps，mapDispatchToProps)(xxxPages)
+ *      中的 xxxPages 改成当前页面即可，
+ *      这时 connect 执行完后会走当前页面的 compoentWillMount和 render函数。
+
  */
 AddTodo = connect()(AddTodo);
 
